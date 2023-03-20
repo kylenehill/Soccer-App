@@ -11,7 +11,7 @@ def get_df():
 
 
 	# create df from mls_players.csv with column headers
-	df = pd.read_csv("/Users/kylene/cs469/django_app/soccer_app_stuff/soccer/data_scripts/mls_players.csv")
+	df = pd.read_csv("static/mls_players.csv")
 	df.columns = ['name', 'age', 'club', 'position', 'home_location', 'years_played']
 
 
