@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-r!ly+l&h%@z$^fs*nrok5t+1lm$2_)zz_$^&-&%1w#!y_lfmuk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = ["soccer-dev.us-west-2.elasticbeanstalk.com", "localhost", "127.0.0.1"]
+
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = ['https://web-production-f1e6.up.railway.app']
 
 # Application definition
 
@@ -79,7 +80,6 @@ WSGI_APPLICATION = 'soccer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-#commented out after testing
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -87,54 +87,7 @@ DATABASES = {
     }
 }
 
-##
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'soccer',
-#         'USER': 'soccer',
-#         'PASSWORD': 'someDBpw!',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
 
-# if 'RDS_DB_NAME' in os.environ:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#             'NAME': os.environ['RDS_DB_NAME'],
-#             'USER': os.environ['RDS_USERNAME'],
-#             'PASSWORD': os.environ['RDS_PASSWORD'],
-#             'HOST': os.environ['RDS_HOSTNAME'],
-#             'PORT': os.environ['RDS_PORT'],
-#         }
-#     }
-#     print("AWS DB FOUND")
-# else:
-
-    #DATABASES = 
-    # {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'ebdb',
-    #     'USER': 'soccerdbuser',
-    #     'PASSWORD': 'someDBpw!',
-    #     'HOST': 'awseb-e-mpjienfmxm-stack-awsebrdsdatabase-7n3ie9j61ovn.cka707l3h0vs.us-west-2.rds.amazonaws.com',
-    #     'PORT': '5432',
-    # }
-#     # }
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#             'NAME': 'soccer',
-#             'USER': 'kylene',
-#             'PASSWORD': 'someDBpw!',
-#             'HOST': 'localhost',
-#             'PORT': '5432',
-#         }
-#     }
-# print(DATABASES)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
