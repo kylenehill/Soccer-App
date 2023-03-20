@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Soccer App Homepage</h1>
+    <p>Please enter player information.</p>
+
+    <form action='.' method='POST'> {% csrf_token %}
+        {{ form.as_p }}
+         <input type="submit" value="Submit">
+         <input type="reset" value="Reset">
+    </form>
+
+
+</body>
+</html>

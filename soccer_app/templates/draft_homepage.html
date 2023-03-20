@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Soccer App Homepage</h1>
+    <p>Please enter player information.</p>
+
+
+    <form action="results/" method="POST"> {% csrf_token %}
+        <div>
+        <table>
+
+            <tr>
+                <td>
+                    <label for="name">
+                        Name
+                    </label>
+                </td>
+                <td><input type="text" id="name" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label for="age">
+                        Age
+                    </label>
+                </td>
+                <td><input type="number" id="age" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label for="club_name">
+                        Club Name
+                    </label>
+                </td>
+                <td><input type="text" id="club_name"  />
+                </td>
+            </tr>
+            <tr>
+                <td><label for="number_years_played">
+                        Number of Years Played
+                    </label>
+                </td>
+                <td><input type="number" id="number_years_played" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label for="home_state">Choose a Home State:
+                    </label>
+                </td>
+                <td>
+                <select id="home_state" name="home_state" required >
+                    <option value="ca">CA</option>
+                    <option value="nv">NV</option>
+                    <option value="ny">NY</option>
+                    <option value="international">International</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="player_position">Select player position:
+                    </label>
+                </td>
+                <td>
+                    <input type=radio name=player_position value=Forward required>   Forward<br>
+                    <input type=radio name=player_position value=Midfielder required>    Midfielder<br>
+                    <input type=radio name=player_position value=Defender required>  Defender<br>
+                    <input type=radio name=player_position value=Goalkeeper required>    Goalkeeper<br>
+                </td>
+            </tr>
+
+        </table>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+
+
+    </form>
+
+
+</body>
+</html>
